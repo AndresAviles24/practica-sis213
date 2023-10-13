@@ -2,7 +2,7 @@
   <div>
     <h2>Lista de paises</h2>
 
-    <form @submit.prevent="saveTask()">
+    <form @submit.prevent="saveForm()">
         
         <div class="form-group">
           <label for="label">Etiqueta</label>
@@ -56,7 +56,17 @@ export default {
         .then((response) => {
           this.countries = response.data.result;
         });
+  },
+  methods: {
+    saveForm(){
+    }
   }
 }
 
 </script>
+
+<style scoped>
+#submit-button {
+  margin-right: 25px;
+}
+</style>
